@@ -1,0 +1,4 @@
+#!/bin/bash
+base64 $1 -w 0 > data.html
+cat header.html data.html footer.html > $2
+rm data.html
