@@ -9,8 +9,8 @@ if command_exists asciinema ; then
                 else
                         whoami="$(whoami)-$(echo $SSH_CONNECTION | awk '{print $1}')"
                 fi
-                printf "recording to: %s\n" "/tmp/history-$whoami-$(date +"%Y%m%dT%H%M%S%Z").json"
+                printf "recording to: %s\n" "/tmp/history-$whoami-$(date +"%Y%m%dT%H%M%S%Z").cast"
                 export ASCIINEMA_REC="1"
-                exec asciinema rec -q -i 1 /tmp/history-$whoami-$(date +"%Y%m%dT%H%M%S%Z").json
+                exec asciinema rec -q -i 1 /tmp/history-$whoami-$(date +"%Y%m%dT%H%M%S%Z").cast
         fi
 fi
