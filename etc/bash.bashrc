@@ -11,6 +11,6 @@ if command_exists asciinema ; then
                 fi
                 printf "recording to: %s\n" "/tmp/history-$whoami-$(date +"%Y%m%dT%H%M%S%Z").json"
                 export ASCIINEMA_REC="1"
-                exec asciinema rec -q /tmp/history-$whoami-$(date +"%Y%m%dT%H%M%S%Z").json
+                exec asciinema rec -q -i 1 /tmp/history-$whoami-$(date +"%Y%m%dT%H%M%S%Z").json
         fi
 fi
